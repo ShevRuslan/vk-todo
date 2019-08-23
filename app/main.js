@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
-import router from './router'
-import NavWatcher from './scripts/nav-watcher'
+import store from './store' 
 
 Vue.config.productionTip = false
 
@@ -18,22 +16,19 @@ Vue.mixin({
     }
 })
 
-// Декоратор роутера VK
-// TODO: скорее всего он тут не будет нужен
-window.navWatcher = new NavWatcher({
-    callback: objLoc => console.log('Параметры коллбека перехода: ', objLoc),
-});
+
 
 // Создаем блок, в который будет монтироваться приложение
 let appElem = document.createElement('div')
     // id корневого элемента приложения будет соответствовать имени приложения
-appElem.id = APP_NAME
-    // и добавляем его в конец body
-document.body.appendChild(appElem)
+appElem.id = APP_NAME;
 
+let parentElement = document.querySelector('#side_bar_inner nav');
+if (parentElement) {
+    parentElement.after(appElem);
+}
 // Сохраняем экземпляр приложения в глобальную переменную под именем приложения
 window[APP_NAME] = new Vue({
-    router,
     store,
     created() {
         // Заносим имя приложения в store
