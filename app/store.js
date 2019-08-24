@@ -3,11 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
+export default new Vuex.Store({
     state: {
         appName: '',
         SStorage: null,
-        goTo: null
     },
     getters: {
         appName(state) {
@@ -16,9 +15,7 @@ const store = new Vuex.Store({
         SStorage(state) {
             return state.SStorage
         },
-        goTo(state) {
-            return state.goTo;
-        }
+
     },
     // commit
     mutations: {
@@ -28,14 +25,10 @@ const store = new Vuex.Store({
         setSStorage(state, SStorage) {
             state.SStorage = SStorage
         },
-        setGoTo(state, goTo) {
-            state.goTo = goTo;
-        }
+
     },
     // dispatch
     actions: {
 
     }
 })
-
-export default store
