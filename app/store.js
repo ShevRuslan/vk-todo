@@ -9,11 +9,11 @@ export default new Vuex.Store({
         SStorage: null,
         todos: [
             {
-                title: 'First',
+                id: 1,
                 content: 'First content'
             },
             {
-                title: 'Second',
+                id: 2,
                 content: 'Second content',
             }
         ]
@@ -25,7 +25,9 @@ export default new Vuex.Store({
         SStorage(state) {
             return state.SStorage
         },
-
+        todos(state) {
+            return state.todos;
+        }
     },
     // commit
     mutations: {
