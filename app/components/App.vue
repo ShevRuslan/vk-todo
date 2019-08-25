@@ -2,7 +2,7 @@
   <div :id="APP_NAME" class="appVue">
     <div class="page_block ui_rmenu ui_rmenu_pr _ui_rmenu_auto_expand" id="feed_rmenu" role="list" style=" border-radius: 5px;padding-top: 0;width: 150px;box-shadow: none !important;">
       <TodoHeader></TodoHeader>
-      <TodoList></TodoList>
+      <TodoList> </TodoList>
     </div>
   </div>
 </template>

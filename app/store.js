@@ -7,6 +7,16 @@ export default new Vuex.Store({
     state: {
         appName: '',
         SStorage: null,
+        todos: [
+            {
+                title: 'First',
+                content: 'First content'
+            },
+            {
+                title: 'Second',
+                content: 'Second content',
+            }
+        ]
     },
     getters: {
         appName(state) {
