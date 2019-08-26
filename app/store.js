@@ -10,11 +10,13 @@ export default new Vuex.Store({
         todos: [
             {
                 id: 1,
-                content: 'First content'
+                content: 'First content',
+                important: false
             },
             {
                 id: 2,
                 content: 'Second content',
+                important: true
             }
         ]
     },

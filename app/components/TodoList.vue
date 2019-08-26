@@ -3,6 +3,7 @@
        <todo-list-element 
        v-for="todo in todos" 
        v-bind:content="todo.content"
+       v-bind:important="todo.important"
        v-bind:key="todo.id">
 
        </todo-list-element>
