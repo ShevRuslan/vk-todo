@@ -2,7 +2,7 @@
     <a id="ui_rmenu_news" href="#" class="ui_rmenu_item _ui_item_news feed_section_news" style="padding-left: 10px;position: relative;box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);border-radius: 5px 5px 0 0;">
         <span>
           <div class="ui_actions_menu_wrap _ui_menu_wrap feed_lists_icon ui_actions_menu_sublist" id="feed_add_list_icon">
-             <div class="feed_filter_icon" style="background: url(/images/icons/edit_newsfeed.png) no-repeat 4px 4px; position: static;top: auto; bottom: auto;left: auto;right: auto;float: right;width: 20px;height: 20px;margin: 6px 1px 0 0;opacity: 0.7;"></div>
+             <div @click="open" class="feed_filter_icon" style="background: url(/images/icons/edit_newsfeed.png) no-repeat 4px 4px; position: static;top: auto; bottom: auto;left: auto;right: auto;float: right;width: 20px;height: 20px;margin: 6px 1px 0 0;opacity: 0.7;"></div>
              <div class="feed_filter_icon" style="background: url(/images/icons/edit_newsfeed.png) no-repeat 3px -12px; float: right;margin: 6px 4px 0 0;width: 20px;height: 20px;opacity: 0.75;"></div>
           </div>
           <span style="display: flex;align-items: center;">
@@ -24,7 +24,15 @@
 </style>
 
 <script>
+import TodoCreateElement from './TodoCreateElement.vue';
 export default {
-
+  components: {
+    TodoCreateElement,
+  },
+  methods: {
+    open() {
+      this.$store.commit('open');
+    }
+  }
 }
 </script>

@@ -3,6 +3,7 @@
     <div class="page_block ui_rmenu ui_rmenu_pr _ui_rmenu_auto_expand" id="feed_rmenu" role="list" style=" border-radius: 5px;padding-top: 0;width: 150px;box-shadow: none !important;">
       <TodoHeader></TodoHeader>
       <TodoList> </TodoList>
+      <TodoCreateElement></TodoCreateElement>
     </div>
   </div>
 </template>
@@ -10,7 +11,7 @@
 <script>
 import  TodoHeader from './TodoHeader.vue';
 import  TodoList from './TodoList.vue';
-import SStorage from "../scripts/sstorage";
+import TodoCreateElement from './TodoCreateElement.vue';
 import { mapMutations } from "vuex";
 import store from '../store.js';
 export default {
@@ -19,6 +20,7 @@ export default {
   components: {
     TodoHeader,
     TodoList,
+    TodoCreateElement,
   },
 
 };
@@ -40,5 +42,7 @@ export default {
 }
 .page_block {
   padding-bottom: 0px;
+  position: relative;
 }
+
 </style>

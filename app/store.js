@@ -7,6 +7,7 @@ export default new Vuex.Store({
     state: {
         appName: '',
         SStorage: null,
+        open: false,
         todos: [
             {
                 id: 1,
@@ -29,6 +30,9 @@ export default new Vuex.Store({
         },
         todos(state) {
             return state.todos;
+        },
+        isOpen(state) {
+            return state.open;
         }
     },
     // commit
@@ -39,7 +43,9 @@ export default new Vuex.Store({
         setSStorage(state, SStorage) {
             state.SStorage = SStorage
         },
-
+        open(state) {
+            state.open = !state.open;
+        }
     },
     // dispatch
     actions: {

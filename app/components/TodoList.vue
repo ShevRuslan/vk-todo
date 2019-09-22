@@ -22,7 +22,8 @@
         computed: {
             ...mapGetters([
                 'todos'
-            ])
+            ]),
+            
         }
     }
 </script>
